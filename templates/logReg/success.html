@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Welcome {{ request.session.user_fname }}!</h1>
+	
+	<form class="" action="{% url 'regesterlog:logout' %}" method="post">
+		    {% csrf_token %}
+		<input type="submit" name="Logout" value="Logout">
+	</form>
+
+	<form class="" action="{% url 'courses:usercourses' %}"  method="post">
+		    {% csrf_token %}
+		<input type="submit" name="Logout" value="Catalog">
+	</form>
+	
+</html>
+
+
+
